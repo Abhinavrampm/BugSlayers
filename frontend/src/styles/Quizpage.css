@@ -1,0 +1,125 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    background-image: url("\hack360_F_428871097_74QTIx9LRjJSBTnknjFlX2pSTRIL1edy.jpg");
+    align-items: flex-start; /* Align items from the top instead of center */
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .quiz-container {
+    background-color: #f9f8f6e8; /* Use your chosen color */
+    border: 2px solid #e7f0df; /* Optional: adds a subtle border */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 20px;
+    margin: 20px auto; /* Centers the container */
+    max-width: 1000px; /* Adjust as needed */
+    font-family: serif; /* Use a classic font */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+  
+  .quiz-title {
+    text-align: center;
+    font-size: 2.5rem; /* Increased font size */
+    color: #4b4b4b; /* Vibrant color */
+    margin-bottom: 20px;
+    font-weight: bold; /* Bold font */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    letter-spacing: 2px; /* Increased letter spacing */
+    
+    /* Adding a subtle animation */
+    animation: fadeIn 1.5s ease-in-out;
+    
+    /* Add a text shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Keyframes for the fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hover effect */
+  .quiz-title:hover {
+    color: #004d40; /* Change color on hover */
+    transform: scale(1.1); /* Slight scale up effect */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .question-container {
+    margin-bottom: 25px;
+  }
+  
+  .question-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  .option-container {
+    margin: 10px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .radio-input {
+    margin-right: 10px;
+  }
+  
+  .radio-label {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .radio-label:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .radio-input:checked + .radio-label {
+    background-color: #e0f7fa;
+    font-weight: bold;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 1rem;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #004d40;
+  }
+  
+  .submit-button:active {
+    background-color: #00332e;
+  }
+  
+  
