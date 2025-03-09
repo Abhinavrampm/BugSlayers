@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
-import "../styles/Quizpage.css"; 
-// import MedicineRecommendation from "../components/MedicineRecommendation";
+import "../styles/Quizpage.css";
+import { useNavigate } from "react-router-dom";  // Import useNavigate
 
 
 const questiondata = [
@@ -50,50 +50,49 @@ const questiondata = [
 // Map option strings to numeric values
 const optionMapping = {
   "Thin": 0,
-  "Medium": 1, 
+  "Medium": 1,
   "Heavy Body": 2,
-  
-  "Dry": 0, 
-  "Oily": 1, 
+
+  "Dry": 0,
+  "Oily": 1,
   "Moist": 2,
-  
-  "Irregular": 0, 
-  "Strong": 1, 
+
+  "Irregular": 0,
+  "Strong": 1,
   "Slow Digestion": 2,
-    
-  "Light": 0, 
-  "Normal": 1, 
+
+  "Light": 0,
+  "Normal": 1,
   "Heavy Sleep": 2,
-    
-  "Fluctuating": 0, 
-  "Moderate Energy": 1, 
+
+  "Fluctuating": 0,
+  "Moderate Energy": 1,
   "Steady": 2,
-    
-  "Fast": 0, 
-  "Moderate Metabolism": 1, 
-  "Slow Metabolism": 2, 
-   
-  "Anxious": 0, 
-  "Irritable": 1, 
-  "Calm": 2,  
-  
-  "Sweet": 0, 
-  "Spicy": 1, 
-  "Salty": 2  
+
+  "Fast": 0,
+  "Moderate Metabolism": 1,
+  "Slow Metabolism": 2,
+
+  "Anxious": 0,
+  "Irritable": 1,
+  "Calm": 2,
+
+  "Sweet": 0,
+  "Spicy": 1,
+  "Salty": 2
 };
 
-const Questions = () => {
+const QuizPage = () => {
   const [answers, setAnswers] = useState({});
-  const [dosha,setdosha] = useState("")
-
+  const navigate = useNavigate();  // Initialize navigate function
 
   const handleOption = (questionId, selectedOption) => {
-    const numericValue = optionMapping[selectedOption]; 
+    const numericValue = optionMapping[selectedOption];
     setAnswers((prev) => ({ ...prev, [questionId]: numericValue }));
   };
 
   const handleSubmit = async () => {
-    const answerArray = Object.values(answers); 
+    const answerArray = Object.values(answers);
     if (answerArray.length !== 8) {
       alert("Please answer all questions.");
       return;
@@ -105,9 +104,12 @@ const Questions = () => {
         { answers: answerArray },
         { headers: { "Content-Type": "application/json" } }
       );
-      console.log("Response:", response.data);
+      console.log("Response:", response.data.detectedDosha);
       alert("Answer submitted successfully");
-      setdosha(response.data)
+
+      localStorage.setItem("dosha", response.data.detectedDosha); // Save dosha in localStorage
+      navigate("/medicine-recommendation"); // Redirect without using state
+
     } catch (error) {
       console.error("Error submitting answer", error);
       alert("Error submitting the answers");
@@ -115,38 +117,37 @@ const Questions = () => {
   };
 
   return (
-    <>
-    <h2 className="quiz-title">Find Your Dosha</h2>
-    <div className="quiz-container">
-      {/* <h2 className="quiz-title">Find Your Dosha</h2> */}
-      {questiondata.map((q) => (
-        <div className="question-container" key={q.id}>
-          <h4 className="question-text">{q.question}</h4>
-          {q.options.map((option) => (
-            <div className="option-container" key={option}>
-              <input
-                type="radio"
-                id={`question-${q.id}-option-${option}`}
-                name={`question-${q.id}`}
-                value={option}
-                checked={answers[q.id] === optionMapping[option]}
-                onChange={() => handleOption(q.id, option)}
-                className="radio-input"
-              />
-              <label htmlFor={`question-${q.id}-option-${option}`} className="radio-label">
-                {option}
-              </label>
-            </div>
-          ))}
-        </div>
-      ))}
-      <button onClick={handleSubmit} className="submit-button">Submit</button>
-      {/* <MedicineRecommendation dosha = {dosha}/> */}
+    <div className="quiz-wrapper">
+      <h2 className="quiz-title">Find Your Dosha</h2>
+      <div className="quiz-container">
+        {/* <h2 className="quiz-title">Find Your Dosha</h2> */}
+        {questiondata.map((q) => (
+          <div className="question-container" key={q.id}>
+            <h4 className="question-text">{q.question}</h4>
+            {q.options.map((option) => (
+              <div className="option-container" key={option}>
+                <input
+                  type="radio"
+                  id={`question-${q.id}-option-${option}`}
+                  name={`question-${q.id}`}
+                  value={option}
+                  checked={answers[q.id] === optionMapping[option]}
+                  onChange={() => handleOption(q.id, option)}
+                  className="radio-input"
+                />
+                <label htmlFor={`question-${q.id}-option-${option}`} className="radio-label">
+                  {option}
+                </label>
+              </div>
+            ))}
+          </div>
+        ))}
+        <button onClick={handleSubmit} className="submit-button">Submit</button>
 
+      </div>
     </div>
-    </>
   );
 };
 
-export default Questions;
+export default QuizPage;
 

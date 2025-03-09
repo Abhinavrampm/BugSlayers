@@ -1,0 +1,220 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap');
+
+/* General Page Styling */
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.home-wrapper {
+    flex: 1; /* Allow the content to grow and take up remaining space */
+
+}
+
+.home-container {
+    background: url("../assets/background.jpg") no-repeat center center/cover;
+    color: #3b4a2c;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 40px;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensures content starts from the top */
+}
+
+/* Ensure footer is at the bottom */
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(60, 90, 60, 0.9);
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    margin-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+    scroll-behavior: smooth;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Adjust body content */
+.body-content {
+    padding-top: 70px;
+    flex: 1; /* Ensures this section takes up available space */
+}
+
+/* Highlighted Text */
+.highlight {
+    font-size: 28px;
+    font-weight: 600;
+    color: #5a8f62;
+    margin-bottom: 30px;
+    font-family: "Playfair Display", serif;
+    line-height: 1.4;
+}
+
+/* Dosha Container */
+.dosha-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Dosha Box Styling */
+.dosha-box {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    width: 160px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    min-height: 70px;
+}
+
+.quiz-button {
+    width: 20%;
+}
+
+.dosha-box:hover {
+    transform: scale(1.05);
+}
+
+/* Dosha Colors */
+.vata {
+    background: linear-gradient(to right, #8cbf88, #b3d9b5);
+}
+
+.pitta {
+    background: linear-gradient(to right, #f4a261, #f7c79c);
+}
+
+.kapha {
+    background: linear-gradient(to right, #5a8f62, #7bbf8f);
+}
+
+/* Dosha Name */
+.dosha-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Hover Effect: Display Description */
+.hover-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: white;
+    font-weight: 400;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Image Styling */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.dosha-image {
+    width: 80%;
+    max-width: 750px;
+    border-radius: 10px;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+}
+
+/* About Sections */
+.about-section, .team-section {
+    background: #f4efe1;
+    padding: 40px 20px;
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-section h2, .team-section h2 {
+    font-size: 24px;
+    color: #6b4226;
+}
+
+.about-section p, .team-section p {
+    font-size: 16px;
+    color: #3b4a2c;
+    line-height: 1.6;
+}
+
+/* Submit Button Styling */
+.quiz-button {
+    background-color: #b5651d;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.quiz-button:hover {
+    background-color: #8b4513;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: rgba(60, 90, 60, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100vw;
+    
+}

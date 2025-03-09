@@ -1,21 +1,9 @@
-/* General styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #e8f5e9;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    background-image: url("\hack360_F_428871097_74QTIx9LRjJSBTnknjFlX2pSTRIL1edy.jpg");
-    align-items: flex-start; /* Align items from the top instead of center */
-    height: 100vh;
-    padding: 20px;
-  }
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap');
+
+.quiz-wrapper {
+  padding-top: 30px;
+}
   
   .quiz-container {
     background-color: #f9f8f6e8; /* Use your chosen color */
@@ -24,7 +12,7 @@
     padding: 20px;
     margin: 20px auto; /* Centers the container */
     max-width: 1000px; /* Adjust as needed */
-    font-family: serif; /* Use a classic font */
+    font-family: poppins; /* Use a classic font */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
 }
   
@@ -65,6 +53,7 @@
   
   .question-container {
     margin-bottom: 25px;
+    font-family: ;
   }
   
   .question-text {
