@@ -1,36 +1,32 @@
+VedaBot: AI-Powered Ayurvedic Wellness System: Bridging Ancient Wisdom with Modern Technology
 
-# Define 3.0
-The official template repository for Define 3.0
-
-![DefineHack 2025 Logo](https://github.com/user-attachments/assets/8173bc16-418e-4912-b500-c6427e4ba4b6)
-
-
-
-# < Project Name >
- Cover Image  If applicable
+VedaBot is an AI-Powered Wellness platform that helps users achieve personalized health and well-being based primarily on the concept of tridoshas. It is a comprehensive system that analyzes user inputs and provides tailored Ayurvedic solutions. 
 
 ### Team Information
-- **Team Name**: <Team Name> 
-- **Track**: < Track >
+- **Team Name**: Bug Slayers
 
+  
 ### Team Members
 | Name | Role | GitHub | LinkedIn |
 |------|------|--------|----------|
-| [Full Name] | [Role] | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
-| [Full Name] | [Role] | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
-| [Full Name] | [Role] | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
-| [Full Name] | [Role] | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
+| Abhinav Ram P M | TeamLead + Backend | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
+| Draupadi S Krishna | Frontend + Documentation | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
+| Shinas Mohammed | Frontend + Styling | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
+| Rohan Mathew | Frontend + Styling | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
 
-## Project Details
+Features: 
+1. Questionnaire to find out user's dominant dosha
+2. ChatBot to answer Ayurveda-related questions
+3. Provides a comprehensive list of predefined symptoms to select from
+4. Personalized recommendation for medications and remedies based on each user's severity level and allergic tendencies.
 
-### Overview
-_A concise summary of your project (2-3 sentences)_
-
-### Problem Statement
-_Describe the problem your project aims to solve_
-
-### Solution
-_Explain your approach to solving the problem_
+Methodology:
+1. Data Collection & Preprocessing (ML Model Development)
+2. Trains two  Machine Learning Models for Disease Prediction and Medicine Recommendations
+3. Built a chatbot that answers ayurveda-related questions
+4. Backend Development (Node.js API)
+5. Frontend Development (React.js)
+6. Integration & Testing
 
 ### Demo
 [![Project Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
@@ -46,8 +42,7 @@ _Replace VIDEO_ID with your YouTube video ID or provide an alternative demo link
 - **Backend**: [Technologies]
 - **Database**: [Technologies]
 - **APIs**: [Technologies]
-- **DevOps**: [Technologies]
-- **Other Tools**: [Technologies]
+
 
 ### Key Features
 - Feature 1
@@ -82,7 +77,7 @@ _Discuss technical challenges and how you overcame them_
 ### Future Enhancements
 _Share your vision for future development_
 
-### References (if any)
+### References (if any)a
 - [Reference 1](link)
 - [Reference 2](link)
 
@@ -95,7 +90,3 @@ _Share your vision for future development_
 - [ ] Ensured all team members are listed
 - [ ] Included setup instructions
 - [ ] Submitted final code to repository
-
----
-
-© Define 3.0 | [Define 3.0](https://www.define3.xyz/)
