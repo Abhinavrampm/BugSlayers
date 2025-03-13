@@ -38,55 +38,13 @@ _Replace VIDEO_ID with your YouTube video ID or provide an alternative demo link
 ## Technical Implementation
 
 ### Technologies Used
-- **Frontend**: [Technologies]
-- **Backend**: [Technologies]
-- **Database**: [Technologies]
-- **APIs**: [Technologies]
+- **Frontend**: React js
+- **Backend**: Node js, Python Flask
+- **APIs**: GEMINI API
 
 
 ### Key Features
-- Feature 1
-- Feature 2
-- Feature 3
+- Dosha detection
+- Disease detection system
+- Personalized Medicine Recommendation 
 
-## Setup Instructions
-
-### Prerequisites
-- Requirement 1
-- Requirement 2
-- Requirement 3
-
-### Installation 
-```bash
-
-```
-
-### Running the Project
-```bash
-
-```
-
-## Additional Resources
-
-### Project Timeline
-_Brief overview of your development process and milestones_
-
-### Challenges Faced
-_Discuss technical challenges and how you overcame them_
-
-### Future Enhancements
-_Share your vision for future development_
-
-### References (if any)a
-- [Reference 1](link)
-- [Reference 2](link)
-
----
-
-### Submission Checklist
-- [ ] Completed all sections of this README
-- [ ] Added project demo video
-- [ ] Provided live project link
-- [ ] Ensured all team members are listed
-- [ ] Included setup instructions
-- [ ] Submitted final code to repository
