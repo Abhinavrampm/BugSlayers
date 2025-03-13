@@ -29,11 +29,8 @@ Methodology:
 6. Integration & Testing
 
 ### Demo
-[![Project Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
-_Replace VIDEO_ID with your YouTube video ID or provide an alternative demo link_
+https://youtu.be/nVtDBuVr0T4
 
-### Live Project
-[Project Name](https://your-project-url.com)
 
 ## Technical Implementation
 
